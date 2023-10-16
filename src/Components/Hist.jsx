@@ -10,9 +10,9 @@ function Hist() {
   const nav = useNavigate()
 
   useEffect(() => {
-    if(isLoggedIn){async function fetchHist(user){
+   async function fetchHist(username){
       try{
-        const res = await axios.get()
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/user/${username}`)
         if(res.status === 200){
           const histData = await res.data
           setHist(histData.slice(0, 10))
@@ -22,9 +22,7 @@ function Hist() {
       }catch(err){
         console.log("Error: ",err)
       }
-      fetchHist()
-    }}else{
-      nav("/login")
+      fetchHist(userData.username)
     }
   },[])
 

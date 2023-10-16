@@ -13,7 +13,24 @@ const [isLoggedIn, setIsLoggedIn] = useState(false)
 const [userData, setUserData] = useState({})
 
 useEffect(() => {
-    async
+    async function fetchUser(){
+        try{
+            const res = await axios.get("", 
+            {withCredentials: true})
+            if(res.status === 200 && res.data){
+                const userD = await res.data
+                setUserData(userD)
+                setIsLoggedIn(true)
+            }else{
+                setIsLoggedIn(false)
+                setUserData({})
+            }
+        }catch(err){
+            setIsLoggedIn(false)
+            setUserData({})
+        }
+    }
+    fetchUser()
 },[])
 
 const value = {
