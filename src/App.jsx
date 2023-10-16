@@ -39,9 +39,9 @@ function App() {
 						path="/login"
 						element={!isLoggedIn ? <Login /> : <Navigate to="/" />}
 					/>
-					<Route path="/dashboard" element={isLoggedIn? <Translate/> : <Navigate to="/login"/>}>
+					<Route path="/dashboard" element={isLoggedIn ? <Dashboard/> : <Navigate to="/login"/>}>
 						<Route
-							path="translate"
+							path=""
 							element={isLoggedIn ? <Translate /> : <Navigate to="/login" />}
 						/>
 						<Route
