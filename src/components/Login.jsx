@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from 'react-router-dom';
 
 export default function Login({setuser}){
     const [email,setemail]=useState("")
@@ -34,7 +35,7 @@ if(response.ok){
           
             <form className="login" onSubmit={handleSubmit}>
                   <div className="py-[100px] px-[600px]">
-           <div className="bg-green  shadow-xl  w-[300px] ">
+           <div className="  shadow-xl  w-[300px] ">
             <div className="flex flex-col justify-start  h-[500px] text-center">
                 <h3 className="p-2">Login</h3>
                
@@ -48,7 +49,10 @@ if(response.ok){
                     </div>
                     <div>
                         <span>Donot you have an Account</span>
-                        <button className="border rounded-sm p-2 mx-[20px]">SignUp</button>
+                        <button className="border rounded-sm p-2 mx-[20px]">
+
+                        <NavLink to="/signup">Click Me</NavLink>
+                        </button>
                     </div>
             </div>
             </div> 

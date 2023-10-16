@@ -32,18 +32,30 @@ if(response.ok){
 
         return(
            
-            <form className="Signup" onSubmit={handleSubmit}>
-                <h3>SignUp</h3>
-                <label >Email</label>
-                <input value={email}  type="email" onChange={(e)=>setemail(e.target.value)}/>
-
-                <label>password:</label>
-                <input value={password} type="password" onChange={(e)=>Setpassword(e.target.value)}/> 
-                    <button>Log In</button>
+            <form className="login" onSubmit={handleSubmit}>
+                  <div className="py-[100px] px-[600px]">
+           <div className="  shadow-xl  w-[300px] ">
+            <div className="flex flex-col justify-start  h-[500px] text-center">
+                <h3 className="p-2">Login</h3>
+               
+                <input className="border rounded-xl p-2 px-8" value={email}placeholder="Email" type="email" onChange={(e)=>setemail(e.target.value)}/>
+                   
+               
+                <input className="border rounded-xl p-2 px-8" value={password}  placeholder="Password" type="password" onChange={(e)=>Setpassword(e.target.value)}/> 
+                    <button className="border rounded-sm p-2 mx-[20px]">Sign Up</button>
                     {error && <div className="error"> {error}</div>}
 
+                    </div>
+                    <div>
+                      
 
+                       
+                    
+                    </div>
+            </div>
+            </div> 
             </form>
+           
             
             
         )
