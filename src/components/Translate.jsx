@@ -142,54 +142,65 @@ export default function Translate() {
         // console.log(langForm);
     };
     return (
-        <Card className="flex flex-row justify-center">
-            <CardBody className="flex flex-row justify-around w-3/4 lg:max-w-800">
-                <form id="langForm" className="w-2/5" onSubmit={handleSubmit}>
-                    <Textarea
-                        label="Text to translate"
-                        labelPlacement="outside"
-                        placeholder="Translate me please..."
-                        // className="max-w-xs"
-                        value={inputValue}
-                        name="text"
-                        onValueChange={setInputValue}
-                    />
-                    <Button type="submit">Translate</Button>
-                </form>
-                <form className="w-2/5">
-                    <Textarea
-                        isReadOnly
-                        label="Translated Text"
-                        labelPlacement="outside"
-                        // placeholder="Enter your description"
-                        // className="w-2/5"
-                        value={outputValue}
-                        onValueChange={setOutputValue}
-                    />
-                    {/* <label htmlFor="languages">Choose language: </label> */}
-                    <Input
-                        list="languages"
-                        label="Choose language"
-                        labelPlacement="outside"
-                        className="mt-6"
-                    />
-                    <datalist
-                        type="select"
-                        name="targetLang"
-                        id="languages"
-                        form="langForm"
+        <>
+            <Card>
+                <CardBody className="text-center">
+                    <h1 className="text-4xl">WordWander</h1>
+                </CardBody>
+            </Card>
+            <Card className="flex flex-row justify-center">
+                <CardBody className="flex flex-row justify-around w-3/4 lg:max-w-800">
+                    <form
+                        id="langForm"
+                        className="w-2/5"
+                        onSubmit={handleSubmit}
                     >
-                        {langOptions.map((lang) => (
-                            <option
-                                key={lang.code}
-                                label={lang.lang}
-                                value={lang.code}
-                                // selected={lang.code === "DE" ? true : false}
-                            />
-                        ))}
-                    </datalist>
-                </form>
-            </CardBody>
-        </Card>
+                        <Textarea
+                            label="Text to translate"
+                            labelPlacement="outside"
+                            placeholder="Translate me please..."
+                            // className="max-w-xs"
+                            value={inputValue}
+                            name="text"
+                            onValueChange={setInputValue}
+                        />
+                        <Button type="submit">Translate</Button>
+                    </form>
+                    <form className="w-2/5">
+                        <Textarea
+                            isReadOnly
+                            label="Translated Text"
+                            labelPlacement="outside"
+                            // placeholder="Enter your description"
+                            // className="w-2/5"
+                            value={outputValue}
+                            onValueChange={setOutputValue}
+                        />
+                        {/* <label htmlFor="languages">Choose language: </label> */}
+                        <Input
+                            list="languages"
+                            label="Choose language"
+                            labelPlacement="outside"
+                            className="mt-6"
+                        />
+                        <datalist
+                            type="select"
+                            name="targetLang"
+                            id="languages"
+                            form="langForm"
+                        >
+                            {langOptions.map((lang) => (
+                                <option
+                                    key={lang.code}
+                                    label={lang.lang}
+                                    value={lang.code}
+                                    // selected={lang.code === "DE" ? true : false}
+                                />
+                            ))}
+                        </datalist>
+                    </form>
+                </CardBody>
+            </Card>
+        </>
     );
 }
