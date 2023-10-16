@@ -1,9 +1,12 @@
-import "./index.css";
+import { Card, CardBody } from "@nextui-org/react";
+
 function App() {
     return (
-        <>
-            <h1 className="text-xs bg-black">WordWander</h1>
-        </>
+        <Card>
+            <CardBody className="text-center">
+                <h1 className="text-4xl">WordWander</h1>
+            </CardBody>
+        </Card>
     );
 }
 
