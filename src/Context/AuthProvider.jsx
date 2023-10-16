@@ -9,7 +9,7 @@ export const useLog = () => {
 }
 
 function AuthProvider({children}) {
-const [isLoggedIn, setIsLoggedIn] = useState(true)
+const [isLoggedIn, setIsLoggedIn] = useState(false)
 const [userData, setUserData] = useState({})
 
 // useEffect(() => {
