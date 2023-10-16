@@ -34,16 +34,16 @@ if(response.ok){
         return(
           
             <form className="login" onSubmit={handleSubmit}>
-                  <div className="py-[100px] px-[600px]">
-           <div className="  shadow-xl  w-[300px] ">
+                  <div className="py-[100px] px-[600px] w-[300px]">
+           <div className="  shadow-xl  w-[300px]  ">
             <div className="flex flex-col justify-start  h-[500px] text-center">
-                <h3 className="p-2">Login</h3>
+                <h3 className="p-8 ">Login</h3>
                
-                <input className="border rounded-xl p-2 px-8" value={email}placeholder="Email" type="email" onChange={(e)=>setemail(e.target.value)}/>
+                <input className="border rounded-xl p-2 px-4 gap-4 m-4" value={email}placeholder="Email" type="email" onChange={(e)=>setemail(e.target.value)}/>
                    
                
-                <input className="border rounded-xl p-2 px-8" value={password}  placeholder="Password" type="password" onChange={(e)=>Setpassword(e.target.value)}/> 
-                    <button className="border rounded-sm p-2 mx-[20px]">Log In</button>
+                <input className="border rounded-xl p-2 px-8 m-4" value={password}  placeholder="Password" type="password" onChange={(e)=>Setpassword(e.target.value)}/> 
+                    <button className=" p-2 mx-[20px] text-right">Log In</button>
                     {error && <div className="error"> {error}</div>}
 
                     </div>
@@ -51,7 +51,7 @@ if(response.ok){
                         <span>Donot you have an Account</span>
                         <button className="border rounded-sm p-2 mx-[20px]">
 
-                        <NavLink to="/signup">Click Me</NavLink>
+                        <NavLink className="text-left" to="/signup">Click Me</NavLink>
                         </button>
                     </div>
             </div>
