@@ -1,7 +1,7 @@
 import { Card, CardBody } from "@nextui-org/react";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Hist from "./Hist";
+import Dashboard from "./Components/Dashboard";
+import Hist from "./Components/Hist";
 
 function App() {
     return (<>   
