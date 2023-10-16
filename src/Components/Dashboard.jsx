@@ -8,10 +8,12 @@ function Dashboard() {
 	return (
 		<>
 			<div className="flex items-center w-screen px-5 py-3 max-w-7xl mx-auto">
-				<Link to="/dashboard"><p className="text-xl font-semibold text-blue-950">Dashboard</p></Link>
+				<Link to="/dashboard">
+					<p className="text-xl font-semibold text-blue-950">Dashboard</p>
+				</Link>
 				<DashboardNav />
 			</div>
-      <Outlet/>
+			<Outlet />
 		</>
 	);
 }
