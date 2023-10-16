@@ -8,34 +8,34 @@ export default function Login({setuser}){
     const[error,Seterror]=useState(null)
     const[loading,Setloading]=useState(false)
     const {setIsLoggedIn} = useLog()
-    const handleSubmit = async(e)=>{
-e.preventDefault();
-Setloading(true)
-Seterror(null)
-//log.user
-const response =await fetch("http://localhost:3000/user/login",{
-    method:"post",
-    headers:{"content-Type":"application/json"},
-    body:JSON.stringify({email,password}),
-})
-const data=await response.json()
-if(!response.ok){
-    Setloading(false)
-    Seterror(data.error) 
+//     const handleSubmit = async(e)=>{
+// e.preventDefault();
+// Setloading(true)
+// Seterror(null)
+// //log.user
+// const response =await fetch("http://localhost:3000/user/login",{
+//     method:"post",
+//     headers:{"content-Type":"application/json"},
+//     body:JSON.stringify({email,password}),
+// })
+// const data=await response.json()
+// if(!response.ok){
+//     Setloading(false)
+//     Seterror(data.error) 
 
-}
-if(response.ok){
+// }
+// if(response.ok){
    
-    localStorage.setItem("user",JSON.stringify(data))
-    Setloading(false)
-    setIsLoggedIn(true)
+//     localStorage.setItem("user",JSON.stringify(data))
+//     Setloading(false)
+//     setIsLoggedIn(true)
 
-}
-    }
+// }
+    // }
 
         return(
           
-            <form className="login" onSubmit={handleSubmit}>
+            <form className="login" onSubmit={() => setIsLoggedIn(true)}>
                   <div className="py-[100px] px-[600px]">
            <div className="  shadow-xl  w-[300px] ">
             <div className="flex flex-col justify-start  h-[500px] text-center">
