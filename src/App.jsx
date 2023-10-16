@@ -1,5 +1,5 @@
 import { Card, CardBody } from "@nextui-org/react";
-import { Translate } from "./components/Translate";
+import Translate from "./components/Translate";
 
 function App() {
     return (

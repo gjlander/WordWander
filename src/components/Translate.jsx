@@ -1,13 +1,21 @@
-import { Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody, Textarea } from "@nextui-org/react";
 
 export default function Translate() {
     return (
         <Card>
-            <CardBody>
-                <p>
-                    Make beautiful websites regardless of your design
-                    experience.
-                </p>
+            <CardBody className="flex flex-row justify-around w-full">
+                <Textarea
+                    label="Text to translate"
+                    labelPlacement="outside"
+                    placeholder="Enter your description"
+                    className="max-w-xs"
+                />
+                <Textarea
+                    label="Translated Text"
+                    labelPlacement="outside"
+                    placeholder="Enter your description"
+                    className="max-w-xs"
+                />
             </CardBody>
         </Card>
     );
