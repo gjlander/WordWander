@@ -20,7 +20,7 @@ export default function Translate() {
                     <Textarea
                         label="Text to translate"
                         labelPlacement="outside"
-                        placeholder="Enter your translation..."
+                        placeholder="Translate me please..."
                         className="max-w-xs"
                         value={inputValue}
                         onValueChange={setInputValue}
