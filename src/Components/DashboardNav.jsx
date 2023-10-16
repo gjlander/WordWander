@@ -9,7 +9,7 @@ function DashboardNav() {
 		<div className="flex w-full justify-between">
 			<div className="mx-5 flex gap-3">
 				<Button className="bg-orange-700 text-white font-semibold">
-					<NavLink to="translate">Translate</NavLink>
+					<NavLink to="">Translate</NavLink>
 				</Button>
 
 				<Button className="bg-orange-700 text-white font-semibold">
