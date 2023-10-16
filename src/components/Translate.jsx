@@ -166,8 +166,19 @@ export default function Translate() {
                         value={outputValue}
                         onValueChange={setOutputValue}
                     />
-                    <label htmlFor="languages">Choose language: </label>
-                    <select name="targetLang" id="languages" form="langForm">
+                    {/* <label htmlFor="languages">Choose language: </label> */}
+                    <Input
+                        list="languages"
+                        label="Choose language"
+                        labelPlacement="outside"
+                        className="mt-6"
+                    />
+                    <datalist
+                        type="select"
+                        name="targetLang"
+                        id="languages"
+                        form="langForm"
+                    >
                         {langOptions.map((lang) => (
                             <option
                                 key={lang.code}
@@ -176,7 +187,7 @@ export default function Translate() {
                                 // selected={lang.code === "DE" ? true : false}
                             />
                         ))}
-                    </select>
+                    </datalist>
                 </form>
             </CardBody>
         </Card>
