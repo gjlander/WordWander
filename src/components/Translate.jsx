@@ -4,9 +4,11 @@ import { useState } from "react";
 
 export default function Translate() {
     const [inputValue, setInputValue] = useState("");
+    const [outputValue, setOutputValue] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setOutputValue(inputValue);
         setInputValue("");
         // textTranslator();
         console.log(inputValue);
@@ -31,6 +33,7 @@ export default function Translate() {
                     labelPlacement="outside"
                     // placeholder="Enter your description"
                     className="max-w-xs"
+                    value={outputValue}
                 />
             </CardBody>
         </Card>
