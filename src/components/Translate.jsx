@@ -1,5 +1,5 @@
 import { Card, CardBody, Textarea, Button } from "@nextui-org/react";
-import { textTranslator } from "../lib/deeplClient";
+// import { textTranslator } from "../lib/deeplClient";
 import { useState } from "react";
 
 export default function Translate() {
@@ -8,12 +8,12 @@ export default function Translate() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setInputValue("");
-        textTranslator();
+        // textTranslator();
         console.log(inputValue);
     };
     return (
         <Card>
-            <CardBody className="flex flex-row justify-around w-full">
+            <CardBody className="flex flex-row justify-center w-full">
                 <form className="w-1/2" onSubmit={handleSubmit}>
                     <Textarea
                         label="Text to translate"
